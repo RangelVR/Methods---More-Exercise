@@ -23,6 +23,7 @@ namespace _02._Center_Point
 
         static void GetTheClosetPoint(double x, double y, double[] result, ref double sum) 
         {
+            //Намираме хипотенузата на правоъгълен триъгълник:
             double curSum = Math.Abs(Math.Sqrt(Math.Pow(x, 2) + Math.Pow(y, 2)));
 
             if (curSum < sum)
