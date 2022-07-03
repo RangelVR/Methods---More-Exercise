@@ -1,31 +1,87 @@
 using System;
+using System.Linq;
 
-namespace Tribonacci_Sequence_More_Exercise_Methods
+namespace _04._Tribonacci_Sequence
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int lenght = int.Parse(Console.ReadLine());
-            int[] tribonacci = new int[lenght];
-            Calculation(tribonacci);
+            int n = int.Parse(Console.ReadLine());
+            int[] arr = new int[Math.Max(n, 3)];
 
-            for (int i = 0; i < lenght; i++)
+            GetTribonacciSequence(n, arr);
+
+            for (int i = 0; i < n; i++)
             {
-                Console.Write($"{tribonacci[i]} ");
+                Console.Write($"{arr[i]} ");
             }
         }
 
-        
-        private static void Calculation(int[] tribonacci)
+        static void GetTribonacciSequence(int n, int[] arr)
         {
-            tribonacci[0] = tribonacci[1] = 1;
-            tribonacci[2] = 2;
+            arr[0] = arr[1] = 1;
+            arr[2] = 2;
 
-            for (int i = 3; i < tribonacci.Length; i++)
+            for (int i = 3; i < n; i++)
             {
-                tribonacci[i] = tribonacci[i - 1] + tribonacci[i - 2] + tribonacci[i - 3];
+                arr[i] = arr[i - 1] + arr[i - 2] + arr[i - 3];
             }
         }
+
     }
 }
+
+
+//using System;
+//using System.Linq;
+
+//namespace _04._Tribonacci_Sequence
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+//            int[] arr = new int[] { 1, 1, 2 };
+//            int n = int.Parse(Console.ReadLine());
+
+//            GetTribonacciSequence(n, arr);
+//        }
+
+//        static void GetTribonacciSequence(int n, int[] arr)
+//        {
+//            int sum = 0;
+
+//            if (n <= 2)
+//            {
+//                IfNlessThen2(n);
+//            }
+//            else
+//            {
+//                Console.Write($"{string.Join(" ", arr)} ");
+//                for (int i = 0; i < n - 3; i++)
+//                {
+//                    sum = arr.Sum();
+//                    Console.Write($"{sum} ");
+//                    for (int j = 0; j < arr.Length - 1; j++)
+//                    {
+//                        arr[j] = arr[j + 1];
+//                    }
+//                    arr[arr.Length - 1] = sum;
+//                }
+//            }
+//        }
+
+//        static void IfNlessThen2(int n)
+//        {
+//            if (n == 1)
+//            {
+//                Console.WriteLine($"1");
+//            }
+//            else if (n == 2)
+//            {
+//                Console.WriteLine($"1 1");
+//            }
+//        }
+//    }
+//}
