@@ -1,54 +1,31 @@
-﻿using System;
-using System.Linq;
+using System;
 
-namespace _04._Tribonacci_Sequence
+namespace Tribonacci_Sequence_More_Exercise_Methods
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int[] arr = new int[] {1, 1, 2};
-            int n = int.Parse(Console.ReadLine());
+            int lenght = int.Parse(Console.ReadLine());
+            int[] tribonacci = new int[lenght];
+            Calculation(tribonacci);
 
-            GetTribonacciSequence(n, arr);
-        }
-
-        static void GetTribonacciSequence(int n, int[] arr)
-        {
-            int sum = 0;
-
-            if (n <= 2)
+            for (int i = 0; i < lenght; i++)
             {
-                IfNlessThen2(n);
-            }
-            else
-            {
-                Console.Write($"{string.Join(" ", arr)} ");
-                for (int i = 0; i < n - 3; i++)
-                {
-                    sum = arr.Sum();
-                    Console.Write($"{sum} ");
-                    for (int j = 0; j < arr.Length - 1; j++)
-                    {
-                        arr[j] = arr[j + 1];
-                    }
-                    arr[arr.Length - 1] = sum;
-                }
+                Console.Write($"{tribonacci[i]} ");
             }
         }
 
-        static void IfNlessThen2(int n) 
-        {
-            if (n == 1)
-            {
-                Console.WriteLine($"1");
-            }
-            else if (n == 2)
-            {
-                Console.WriteLine($"1 1");
-            }
         
-        }
+        private static void Calculation(int[] tribonacci)
+        {
+            tribonacci[0] = tribonacci[1] = 1;
+            tribonacci[2] = 2;
 
+            for (int i = 3; i < tribonacci.Length; i++)
+            {
+                tribonacci[i] = tribonacci[i - 1] + tribonacci[i - 2] + tribonacci[i - 3];
+            }
+        }
     }
 }
