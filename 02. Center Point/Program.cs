@@ -31,3 +31,47 @@ namespace _02.Center_Point
 
     }
 }
+========================================================================================================
+//using System;
+
+//namespace _02.Center_Point
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+//            double x = 0;
+//            double y = 0;
+//            PrintClosestPointToZero(x, y);
+//        }
+
+
+//        static void PrintClosestPointToZero(double x, double y)
+//        {
+//            double[] result = new double[2];
+//            double closestPoint = double.MaxValue;
+//            int counter = 0;
+
+//            for (int i = 0; i < 2; i++)
+//            {
+//                x = double.Parse(Console.ReadLine());
+//                y = double.Parse(Console.ReadLine());
+//                double[] arr = new double[2] { x, y };
+
+//                double hypotenuse = Math.Sqrt(Math.Pow(x, 2) + Math.Pow(y, 2));
+
+//                if (hypotenuse < closestPoint)
+//                {
+//                    closestPoint = hypotenuse;
+//                    result = arr;
+//                }
+//                counter++;
+//                if (counter == 2)
+//                {
+//                    Console.WriteLine($"({string.Join(", ", result)})");
+//                }
+//            }
+//        }
+
+//    }
+//}
