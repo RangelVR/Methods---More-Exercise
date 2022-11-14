@@ -40,3 +40,40 @@ namespace _01._Data_Types
 
     }
 }
+=======================================================================================
+//using System;
+
+//namespace _01.Data_Types
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+//            string input = Console.ReadLine();
+//            string data = Console.ReadLine();
+
+//            if (input == "string")
+//            {
+//                Console.WriteLine($"${data}$");
+//            }
+//            PrintIntAndDoubleResult(input, data);
+//        }
+
+//        static void PrintIntAndDoubleResult(string input, string data)
+//        {
+//            switch (input)
+//            {
+//                case "int":
+//                    int resultInt = int.Parse(data) * 2;
+//                    Console.WriteLine(resultInt);
+//                    break;
+
+//                case "real":
+//                    double resultDouble = double.Parse(data) * 1.5;
+//                    Console.WriteLine($"{resultDouble:f2}");
+//                    break;
+//            }
+//        }
+
+//    }
+//}
