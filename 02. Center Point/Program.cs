@@ -13,7 +13,6 @@ namespace _02.Center_Point
             {
                 double x = double.Parse(Console.ReadLine());
                 double y = double.Parse(Console.ReadLine());
-
                 GetClosetPoit(x, y, ref result, ref sum);
             }
             Console.WriteLine($"({string.Join(", ", result)})");
