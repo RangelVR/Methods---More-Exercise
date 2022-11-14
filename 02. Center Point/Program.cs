@@ -1,7 +1,6 @@
-﻿using System;
-using System.Linq;
+using System;
 
-namespace _02._Center_Point
+namespace _02.Center_Point
 {
     class Program
     {
@@ -15,25 +14,21 @@ namespace _02._Center_Point
                 double x = double.Parse(Console.ReadLine());
                 double y = double.Parse(Console.ReadLine());
 
-                GetTheClosetPoint(x, y, result, ref sum);
+                GetClosetPoit(x, y, ref result, ref sum);
             }
             Console.WriteLine($"({string.Join(", ", result)})");
         }
 
 
-        static void GetTheClosetPoint(double x, double y, double[] result, ref double sum) 
+        static void GetClosetPoit(double x, double y, ref double[] result, ref double sum)
         {
-            //Намираме хипотенузата на правоъгълен триъгълник:
-            double curSum = Math.Abs(Math.Sqrt(Math.Pow(x, 2) + Math.Pow(y, 2)));
-
-            if (curSum < sum)
+            double currSum = Math.Sqrt(Math.Pow(x, 2) + Math.Pow(y, 2));
+            if (currSum < sum)
             {
-                sum = curSum;
-
-                result[0] = x;
-                result[1] = y;
+                sum = currSum;
+                result = new double[2] { x, y };
             }
-
         }
+
     }
 }
