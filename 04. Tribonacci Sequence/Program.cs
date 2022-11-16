@@ -31,57 +31,30 @@ namespace _04._Tribonacci_Sequence
 
     }
 }
-
+==============================================================================================================
 
 //using System;
-//using System.Linq;
 
-//namespace _04._Tribonacci_Sequence
+//namespace _04.Tribonacci_Sequence
 //{
 //    class Program
 //    {
 //        static void Main(string[] args)
 //        {
-//            int[] arr = new int[] { 1, 1, 2 };
 //            int n = int.Parse(Console.ReadLine());
+//            int[] arr = new int[Math.Max(n, 3)];
+//            arr[0] = arr[1] = 1;
+//            arr[2] = 2;
 
-//            GetTribonacciSequence(n, arr);
-//        }
-
-//        static void GetTribonacciSequence(int n, int[] arr)
-//        {
-//            int sum = 0;
-
-//            if (n <= 2)
+//            for (int i = 3; i < n; i++)
 //            {
-//                IfNlessThen2(n);
+//                arr[i] = arr[i - 1] + arr[i - 2] + arr[i - 3];
 //            }
-//            else
+//            for (int i = 0; i < n; i++)
 //            {
-//                Console.Write($"{string.Join(" ", arr)} ");
-//                for (int i = 0; i < n - 3; i++)
-//                {
-//                    sum = arr.Sum();
-//                    Console.Write($"{sum} ");
-//                    for (int j = 0; j < arr.Length - 1; j++)
-//                    {
-//                        arr[j] = arr[j + 1];
-//                    }
-//                    arr[arr.Length - 1] = sum;
-//                }
+//                Console.Write(arr[i] + " ");
 //            }
 //        }
 
-//        static void IfNlessThen2(int n)
-//        {
-//            if (n == 1)
-//            {
-//                Console.WriteLine($"1");
-//            }
-//            else if (n == 2)
-//            {
-//                Console.WriteLine($"1 1");
-//            }
-//        }
 //    }
 //}
