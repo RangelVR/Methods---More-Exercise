@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Linq;
 
-namespace _02._Center_Point
+namespace _02._Longer_Line
 {
     class Program
     {
