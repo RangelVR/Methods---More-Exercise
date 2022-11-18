@@ -1,6 +1,6 @@
 using System;
 
-namespace _04.Tribonacci_Sequence
+namespace _05. Multiplication_Sign
 {
     class Program
     {
