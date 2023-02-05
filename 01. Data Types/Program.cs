@@ -1,79 +1,42 @@
-﻿using System;
-
-namespace _01._Data_Types
+namespace test
 {
-    class Program
+    internal class Program
     {
         static void Main(string[] args)
         {
-            string dataType = Console.ReadLine();
-            string data = Console.ReadLine();
+            string type = Console.ReadLine();
+            string input = Console.ReadLine();
 
-            if (dataType == "int")
+            switch (type)
             {
-                PrintDataInt(dataType, data);
-            }
-            else if (dataType == "real")
-            {
-                PrintDataReal(dataType, data);
-            }
-            else if (dataType == "string")
-            {
-                Console.WriteLine($"${data}$");
+                case "int":
+                   int number = int.Parse(input);
+                    GetTypeAndPrint(type, number);
+                    break;
+                case "real":
+                    double realNnum = double.Parse(input);
+                    GetTypeAndPrint(type, realNnum);
+                    break;
+
+                default:
+                    GetTypeAndPrint(type, input);
+                    break;
             }
         }
 
-
-        static void PrintDataInt(string dataType, string data) 
+        static void GetTypeAndPrint(string type, string input)
         {
-            int number = int.Parse(data);
+            Console.WriteLine("${0}$", input);
+        }
+
+        static void GetTypeAndPrint(string type, int number)
+        {
             Console.WriteLine(number * 2);
         }
 
-
-        static void PrintDataReal(string dataType, string data) 
+        static void GetTypeAndPrint(string type, double realNum)
         {
-            double number = double.Parse(data);
-            double sum = number * 1.5;
-            Console.WriteLine($"{sum:f2}");
+            Console.WriteLine($"{(realNum * 1.5d):f2}");
         }
-
     }
 }
-=======================================================================================
-//using System;
-
-//namespace _01.Data_Types
-//{
-//    class Program
-//    {
-//        static void Main(string[] args)
-//        {
-//            string input = Console.ReadLine();
-//            string data = Console.ReadLine();
-
-//            if (input == "string")
-//            {
-//                Console.WriteLine($"${data}$");
-//            }
-//            PrintIntAndDoubleResult(input, data);
-//        }
-
-//        static void PrintIntAndDoubleResult(string input, string data)
-//        {
-//            switch (input)
-//            {
-//                case "int":
-//                    int resultInt = int.Parse(data) * 2;
-//                    Console.WriteLine(resultInt);
-//                    break;
-
-//                case "real":
-//                    double resultDouble = double.Parse(data) * 1.5;
-//                    Console.WriteLine($"{resultDouble:f2}");
-//                    break;
-//            }
-//        }
-
-//    }
-//}
